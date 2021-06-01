@@ -1,10 +1,28 @@
 @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0%;
   padding: 0%;
 }
-
+body {
+  font-family: "Montserrat", sans-serif !important;
+}
+.MuiTab-wrapper {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+.Mui-selected {
+  color: #6200ea !important;
+}
+.Mui-selected .fa,
+.Mui-selected .fab {
+  color: rgb(247, 74, 74);
+}
+.PrivateTabIndicator-root-1 {
+  background-color: #6200ea !important;
+}
 /* Header */
 .header {
   padding: 0.5rem 2rem;
@@ -96,4 +114,67 @@
 .questions .MuiTab-root .fa,
 .questions .MuiTab-root .fab {
   font-size: 1.5rem;
+}
+.display-area {
+  min-height: 200px;
+  padding: 1rem;
+}
+.keywords ul,
+.questions ul {
+  list-style: none;
+  padding-left: 0%;
+  /* display: inline-block; */
+}
+.keywords .keyword-item,
+.keywords .similar-item {
+  background: #e2e7fa;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #000;
+  margin: 0.3rem 0.3rem 0rem 0rem;
+  padding: 0.2rem;
+  display: inline-block;
+}
+.questions .question-item:hover {
+  border: 1px solid #6200ea;
+}
+.questions .question-item:hover .fa-external-link-square-alt {
+  display: block;
+}
+.questions .question-item {
+  display: block;
+  border: 1px solid #e2e7fa;
+  /* background: #e2e7fa; */
+  color: #000;
+  border-radius: 6px;
+  position: relative;
+  font-size: 1rem;
+  margin: 0.3rem 0.3rem 0rem 0rem;
+  padding: 0.5rem;
+}
+.questions .question-item a {
+  color: #000;
+  /* font-weight: 500; */
+  text-decoration: none;
+}
+.questions .title {
+  border-bottom: 2px solid #6200ea;
+}
+.questions .title h3,
+.title h3 {
+  font-size: 18px;
+  margin: 0px;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  color: #6200ea;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.question-item .fa-external-link-square-alt {
+  position: absolute;
+  top: 2px;
+  color: #57595f;
+  display: none;
+  right: 2px;
 }

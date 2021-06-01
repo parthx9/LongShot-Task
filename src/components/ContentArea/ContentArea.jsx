@@ -9,7 +9,7 @@ const ContentArea = () => {
                     <div className='col-md-2'>
                         <Choices />                       
                     </div>
-                    <div className='col-md-6'>
+                    <div className='col-md-10'>
                         <SearchArea />
                     </div>
                 </div>

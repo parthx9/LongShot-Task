@@ -30,7 +30,7 @@ const QuestionsTab = () => {
                     <Tab value={2} icon={<i className='fa fa-reddit'></i>} />
                 </Tabs>
             </div>
-            <div>
+            <div className='display-area'>
                 {tabValue === 0?(
                     <Qoura />
                 ):null}

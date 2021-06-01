@@ -1,11 +1,13 @@
 import KeywordsTab from "../Tabs/KeywordsTab"
 import QuestionsTab from "../Tabs/QuestionsTab"
+import DefinitionTab from '../Tabs/DefinitionTab'
+import CollectedArea from  './CollectedArea'
 
 const SearchArea = () => {
     return(
         <div className='search-area'>
             <div className='row'>
-                <div className='col-md-7'>
+                <div className='col-md-6'>
                     <div className='search-bar'>
                         <input type='text' />
                         <div className='search-btn'>
@@ -20,6 +22,10 @@ const SearchArea = () => {
                     </div>
                     <KeywordsTab />
                     <QuestionsTab />
+                </div>
+                <div className='col-md-6'>
+                    <DefinitionTab />
+                    <CollectedArea />
                 </div>
             </div>
         </div>

@@ -1,11 +1,11 @@
 import { Tab, Tabs } from "@material-ui/core"
 import { useContext, useEffect, useState } from "react"
 import DataContext from "../../utils/DataContent"
+import Definition from "./TabAreas/Definition"
 import Keywords from "./TabAreas/Keywords"
 import Topics from "./TabAreas/Topics"
 
-const KeywordsTab = () => {
-
+const DefinitionTab = () => {
     const [tabValue, setTabValue] = useState(1)
     const {data, setData} = useContext(DataContext)
 
@@ -23,12 +23,12 @@ const KeywordsTab = () => {
                 onChange={(event, value) => setTabValue(value)}    
                 aria-label="disabled tabs example"
             >
-                <Tab value={0} label="Top Keywords" />
-                <Tab value={1} label="Similar Topics" />
+                <Tab value={0} label="Definition" />
+                <Tab value={1} label="Search Trends" />
             </Tabs>
             <div className='display-area'>
                 {tabValue === 0?(
-                    <Keywords />
+                    <Definition />
                 ):(
                     <Topics />
                 )}
@@ -37,4 +37,4 @@ const KeywordsTab = () => {
     )
 }
 
-export default KeywordsTab
+export default DefinitionTab

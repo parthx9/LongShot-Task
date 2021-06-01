@@ -8,26 +8,35 @@
 body {
   font-family: "Montserrat", sans-serif !important;
 }
+.hr-theme {
+  background: #02afff;
+  height: 2px !important;
+  margin: 0;
+  opacity: 1 !important;
+}
 .MuiTab-wrapper {
   font-weight: 700;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
 }
+.br-1 {
+  border-right: 2px solid #e2e7fa;
+}
 .Mui-selected {
-  color: #6200ea !important;
+  color: #02afff !important;
 }
 .Mui-selected .fa,
 .Mui-selected .fab {
   color: rgb(247, 74, 74);
 }
 .PrivateTabIndicator-root-1 {
-  background-color: #6200ea !important;
+  background-color: #02afff !important;
 }
 /* Header */
 .header {
   padding: 0.5rem 2rem;
   display: flex;
-  border-bottom: 1px solid #e2e7fa;
+  border-bottom: 2px solid #e2e7fa;
 }
 .header .logo {
   display: flex;
@@ -46,7 +55,8 @@ body {
 /* CHOICES AREA */
 .choices {
   padding: 1rem;
-  border-right: 1px solid #e2e7fa;
+  height: 100%;
+  border-right: 2px solid #e2e7fa;
 }
 .choices ul {
   list-style: none;
@@ -66,7 +76,7 @@ body {
 }
 /* SEARCH AREA */
 .search-area {
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
 }
 .search-area .search-bar input {
   border: none;
@@ -141,6 +151,9 @@ body {
 .questions .question-item:hover .fa-external-link-square-alt {
   display: block;
 }
+.questions .MuiTabs-root {
+  margin-left: auto !important;
+}
 .questions .question-item {
   display: block;
   border: 1px solid #e2e7fa;
@@ -157,17 +170,18 @@ body {
   /* font-weight: 500; */
   text-decoration: none;
 }
-.questions .title {
-  border-bottom: 2px solid #6200ea;
+.questions .title,
+.title {
+  border-bottom: 2px solid #02afff;
 }
 .questions .title h3,
 .title h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0px;
   padding-left: 2rem;
   display: flex;
   align-items: center;
-  color: #6200ea;
+  color: #02afff;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -177,4 +191,25 @@ body {
   color: #57595f;
   display: none;
   right: 2px;
+}
+/* COLLECTED */
+.collected-box {
+  background: #e2e7fa;
+  border-radius: 10px;
+  min-height: 300px;
+  margin: 1rem;
+}
+.collected-area .title h3 {
+  padding: 1rem 2rem;
+}
+/* ERROR */
+.error p {
+  color: #7e8bb6;
+  padding: 2rem;
+}
+.error {
+  padding: 2rem 1rem;
+}
+.error i {
+  color: #7e8bb6 !important;
 }

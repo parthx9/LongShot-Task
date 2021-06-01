@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import DataContext from "../../../utils/DataContent"
+import Nothing from "../../Error/Nothing"
 
 const Reddit = () => {
 
@@ -7,7 +8,7 @@ const Reddit = () => {
 
     const renderQuestions = () => {
         return(
-            data?.quora_questions.filter((i, index) => index < 5).map((i) => {
+            data?.reddit_questions.filter((i, index) => index < 5).map((i) => {
                 return(
                     <li className='question-item'>
                         <i class="fas fa-external-link-square-alt"></i>
@@ -22,9 +23,11 @@ const Reddit = () => {
 
     return(
         <div>
-            <ul>
+            {data?.reddit_questions?.length > 0?(<ul>
                 {renderQuestions()}
-            </ul>
+            </ul>):(
+                <Nothing />
+            )}
         </div>
     )
 }

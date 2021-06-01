@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import DataContext from "../../../utils/DataContent"
+import Nothing from "../../Error/Nothing"
 
 const Qoura = () => {
 
@@ -22,9 +23,11 @@ const Qoura = () => {
 
     return(
         <div>
-            <ul>
+            {data?.quora_questions?.length > 0?(<ul>
                 {renderQuestions()}
-            </ul>
+            </ul>):(
+                <Nothing />
+            )}
         </div>
     )
 }

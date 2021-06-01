@@ -4,6 +4,7 @@ import DataContext from "../../utils/DataContent"
 import Definition from "./TabAreas/Definition"
 import Keywords from "./TabAreas/Keywords"
 import Topics from "./TabAreas/Topics"
+import Trends from "./TabAreas/Trends"
 
 const DefinitionTab = () => {
     const [tabValue, setTabValue] = useState(1)
@@ -30,7 +31,7 @@ const DefinitionTab = () => {
                 {tabValue === 0?(
                     <Definition />
                 ):(
-                    <Topics />
+                    <Trends />
                 )}
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import DataContext from "../../../utils/DataContent"
+import Nothing from "../../Error/Nothing"
 
 const Topics = () => {
 
@@ -19,9 +20,11 @@ const Topics = () => {
 
     return(
         <div>
-            <ul>
+            {data?.similar_topics?.length > 0?(<ul>
                 {renderTopics()}
-            </ul>
+            </ul>):(
+                <Nothing />
+            )}
         </div>
     )
 }

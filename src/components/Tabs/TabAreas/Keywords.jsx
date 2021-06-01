@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import DataContext from "../../../utils/DataContent"
+import Nothing from "../../Error/Nothing"
 
 const Keywords = () => {
 
@@ -19,9 +20,13 @@ const Keywords = () => {
 
     return(
         <div>
-            <ul>
-                {renderKeywords()}
-            </ul>
+            {data?.top_keywords?(
+                <ul>
+                    {renderKeywords()}
+                </ul>
+            ):(
+                <Nothing />
+            )}
         </div>
     )
 }

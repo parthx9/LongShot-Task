@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import DataContext from "../../../utils/DataContent"
+import Nothing from "../../Error/Nothing"
 
 const Definition = () => {
 
@@ -7,9 +8,13 @@ const Definition = () => {
 
     return(
         <div className='display-area'>
-            <p>
-                {data?.definition}
-            </p>
+            {data?.definition?(
+                <p>
+                    {data?.definition}
+                </p>
+            ):(
+                <Nothing />
+            )}
         </div>
     )
 }

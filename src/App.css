@@ -52,6 +52,32 @@ body {
   color: #57595f;
   height: min-content;
 }
+.menu ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+.menu .active {
+  border-left: #6200ea 5px solid;
+  color: #6200ea;
+  font-weight: 700;
+}
+.project {
+  margin: 0.5rem 1rem;
+}
+.project select:focus {
+  outline: none;
+}
+.project select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+}
+.menu li {
+  padding: 1rem;
+}
 /* CHOICES AREA */
 .choices {
   padding: 1rem;
@@ -70,9 +96,9 @@ body {
   margin: 0.5rem;
 }
 .choices .active {
-  background: #6200ea;
+  background: pink;
   border-radius: 6px;
-  color: #e2e7fa;
+  color: #6200ea;
 }
 /* SEARCH AREA */
 .search-area {
@@ -136,14 +162,18 @@ body {
   /* display: inline-block; */
 }
 .keywords .keyword-item,
-.keywords .similar-item {
+.keywords .similar-item,
+.keyword-item {
   background: #e2e7fa;
   border-radius: 6px;
   font-size: 0.8rem;
   color: #000;
   margin: 0.3rem 0.3rem 0rem 0rem;
-  padding: 0.2rem;
+  padding: 0.3rem 0.4rem;
   display: inline-block;
+}
+.fa-search {
+  color: #000;
 }
 .questions .question-item:hover {
   border: 1px solid #6200ea;
@@ -198,9 +228,33 @@ body {
   border-radius: 10px;
   min-height: 300px;
   margin: 1rem;
+  padding: 1rem;
 }
 .collected-area .title h3 {
   padding: 1rem 2rem;
+}
+.collected-area .keyword-item {
+  background: #7e8bb6;
+  color: #fff;
+}
+.collected-btns {
+  display: flex;
+  margin: 2rem 1rem;
+}
+.collected-btns .skip-btn {
+  background: pink;
+  color: #6200ea;
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  border-radius: 6px;
+}
+.collected-btns .outline-btn {
+  background: #6200ea;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  border-radius: 6px;
+  width: 100%;
 }
 /* ERROR */
 .error p {

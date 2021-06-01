@@ -2,7 +2,7 @@ import KeywordsTab from "../Tabs/KeywordsTab"
 import QuestionsTab from "../Tabs/QuestionsTab"
 import DefinitionTab from '../Tabs/DefinitionTab'
 import CollectedArea from  './CollectedArea'
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import DataContext from "../../utils/DataContent"
 import Nothing from "../Error/Nothing"
 
@@ -11,6 +11,10 @@ const SearchArea = () => {
     const { searchTerm, setSearchTerm } = useContext(DataContext)
     const { data } = useContext(DataContext)
     const [search, setSearch] = useState(null)
+
+    useEffect(() => {
+        setSearch(searchTerm)
+    }, [searchTerm])
 
     return(
         <div className='search-area'>

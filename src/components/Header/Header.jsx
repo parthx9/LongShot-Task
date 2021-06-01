@@ -19,25 +19,27 @@ const Header = () => {
                     <div className='logo'>
                         <img src={logo} alt='LongShort'/>
                     </div>
+                    <div className='project'>
+                        <select>
+                            <option>Project LongShot</option>
+                        </select>
+                    </div>
                     <div className='menu'>
                         <ul>
-                            <li>
+                            <li className='active'>
                                 Blogs
                             </li>
                             <li>
                                 Headline
                             </li>
                             <li>
-                                Blogs
+                                Rephraser 
                             </li>
                             <li>
-                                Headline
+                                Extender
                             </li>
                             <li>
-                                Blogs
-                            </li>
-                            <li>
-                                Headline
+                                Bullet Points
                             </li>
                         </ul>
                     </div>

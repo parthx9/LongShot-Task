@@ -9,6 +9,7 @@ import DataContext from '../utils/DataContent'
 
 const Main = () => {
 
+    const [collected, setCollected] = useState([])
     const [data, setData] = useState(null)
     const [searchTerm, setSearchTerm] = useState(null)
 
@@ -16,13 +17,13 @@ const Main = () => {
         if(searchTerm === 'Facebook Campaign' || searchTerm === 'Facebook campaign' || searchTerm === 'facebook campaign'){
             setData(facebookCampaignData)
         }
-        if(searchTerm === 'Digital Marketing' || searchTerm === 'Digital marketing' || searchTerm === 'digital marketing'){
+        else if(searchTerm === 'Digital Marketing' || searchTerm === 'Digital marketing' || searchTerm === 'digital marketing'){
             setData(digitalMarketingData)
         }
-        if(searchTerm === 'Tesla' || searchTerm === 'tesla'){
+        else if(searchTerm === 'Tesla' || searchTerm === 'tesla'){
             setData(Tesla)
         }
-        if(searchTerm === 'seo vs ppc' || searchTerm === 'Seo vs Ppc' || searchTerm === 'Seo vs ppc'){
+        else if(searchTerm === 'seo vs ppc' || searchTerm === 'Seo vs Ppc' || searchTerm === 'Seo vs ppc'){
             setData(seoVsPpc)
         }
         else{
@@ -30,7 +31,7 @@ const Main = () => {
         }
     },[searchTerm])
 
-    const dataValue = useMemo(() =>({data, setData, searchTerm, setSearchTerm}), [data, setData, searchTerm, setSearchTerm])
+    const dataValue = useMemo(() =>({data, setData, collected, setCollected, searchTerm, setSearchTerm}), [data, setData, collected, setCollected, searchTerm, setSearchTerm])
 
     return(
         <>
